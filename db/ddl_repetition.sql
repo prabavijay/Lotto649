@@ -2,9 +2,9 @@
 
 -- Drop table
 
--- DROP TABLE public.repetition;
+-- DROP TABLE repetition;
 
-CREATE TABLE public.repetition (
+CREATE TABLE repetition (
 	id serial4 NOT NULL,
 	draw_date date NOT NULL,
 	repeated_nums varchar(255) NULL,

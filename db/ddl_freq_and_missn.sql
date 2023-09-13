@@ -2,9 +2,9 @@
 
 -- Drop table
 
--- DROP TABLE public.freq_and_missn;
+-- DROP TABLE freq_and_missn;
 
-CREATE TABLE public.freq_and_missn (
+CREATE TABLE freq_and_missn (
 	id serial4 NOT NULL,
 	draw_date date NOT NULL,
 	frequented_nums varchar(255) NULL,

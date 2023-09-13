@@ -9,15 +9,15 @@ class Wheel:
         print(f"Size of collected numbers: {self.size_collection}")
         self.freq_in_collection = Wheel.create_dict_freq_in_collection(self.collected_numbers_expanded)
         self.collection_sorted = Wheel.sorted_dict_by_value(self.freq_in_collection)
-        Wheel.print_group_of_10s(self.collection_sorted)
+        Wheel.print_group_of_6s(self.collection_sorted)
 
     @staticmethod
-    def print_group_of_10s(collection):
+    def print_group_of_6s(collection):
         count = 0
         for key in collection.keys():
             print(key)
             count += 1
-            if count % 10 == 0:
+            if count % 6 == 0:
                 print("------")
     @staticmethod
     def create_dict_freq_in_collection(numbers_list):

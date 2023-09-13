@@ -2,9 +2,9 @@
 
 -- Drop table
 
--- DROP TABLE public.stats_tracker;
+-- DROP TABLE stats_tracker;
 
-CREATE TABLE public.stats_tracker (
+CREATE TABLE stats_tracker (
 	id serial4 NOT NULL,
 	stats_table varchar(255) NULL,
 	draw_processed int4 NULL
