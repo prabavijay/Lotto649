@@ -217,7 +217,7 @@ class Contents:
 
     def print_freq_by_day_stats(self):
         Contents.print_title("FREQUENTED NUMBERS BY DAY")
-        freq_by_day_numbers = list(self.freq_by_date_stats.keys())[:collectn_size]
+        freq_by_day_numbers = list(self.freq_by_day_stats.keys())[:collectn_size]
         # print(f"Frequented Numbers By Day (with the highest freq): {freq_by_day_numbers}")
         print(freq_by_day_numbers)
         print(f"Total Numbers in collection: {len(freq_by_day_numbers)}")
