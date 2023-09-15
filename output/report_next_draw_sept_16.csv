@@ -1,0 +1,338 @@
+/home/praba/my_github/lotto649/venv/bin/python /home/praba/my_github/lotto649/src/lotto649.py 
+SQLAlchemy version: 2.0.20
+----------------------------
+Hello, Welcome to Lotto 6/49!
+TASK OPTIONS:
+1 - DB Status
+2 - File Status
+3 - Import Latest Draw
+4 - Build Basic Stats
+5 - Analyze Latest Draw
+6 - Generate Basic Report
+7 - Generate Tickets
+8 - Build Advanced Stats
+9 - Generate HTML Report
+10 - DB Backup
+11 - DB Restore
+12 - ADDITIONAL TABLES
+q - QUIT
+PLEASE ENTER INTEGER FOR THE TASK:
+6
+Your Request: Generate Basic Report
+=============== START OF TASK: Generate Basic Report ===============
+
+in 5 - BasicReportService
+Following Stats are for: 
+-----------
+NEXT DRAW DAY:  sat
+NEXT DRAW DATE: [datetime.datetime(2023, 9, 16, 18, 42, 44, 658630), 'sep', '16', 'sat']
+***** BasicReport: Processing repetition stats ...
+Winning JackPot :  True
+total_repetitions :  2
+repeated_nums :  [8, 42]
+repeated_balls :  [1, 5]
+***** BasicReport: Processing frequented_and_missing_stats stats ...
+freq_and_missing :  [7]
+frequented_nums :  [10, 3, 7, 25, 35]
+missing_nums :  [1, 2, 4, 5, 6, 7, 9, 11, 14, 15, 19, 21, 23, 24, 28, 29, 34, 36, 37, 40, 45, 47, 48, 49]
+***** BasicReport: Processing subsequence stats ...
+Last Drawn Numbers: [8, 10, 18, 32, 33, 42, 40]
+[[3, 1, 4], [9, 14, 13], [19, 22, 25], [31, 27, 30], [38, 34, 44], [45, 48, 49], [34, 25, 39]]
+***** BasicReport: Processing freq_by_date stats ...
+[3, 33, 21, 25, 31, 41, 12, 37, 49, 35]
+***** BasicReport: Processing freq_by_ball stats ...
+ball_1 :  1
+ball_2 :  10
+ball_3 :  21
+ball_4 :  31
+ball_5 :  38
+ball_6 :  49
+ball_7 :  5
+***** BasicReport: Processing freq_by_month stats ...
+[15, 21, 41, 29, 39, 4, 27, 42, 13, 10]
+***** BasicReport: Processing freq_by_day stats ...
+[45, 27, 21, 31, 41, 23, 49, 34, 36, 11]
+Size of collected numbers: 33
+{21: 3, 41: 3, 31: 2, 49: 2, 27: 2, 5: 2, 7: 1, 3: 1, 33: 1, 25: 1, 12: 1, 37: 1, 35: 1, 15: 1, 29: 1, 39: 1, 4: 1, 42: 1, 13: 1, 10: 1, 45: 1, 23: 1, 34: 1, 36: 1, 11: 1}
+21
+41
+31
+49
+27
+5
+------
+7
+3
+33
+25
+12
+37
+------
+35
+15
+29
+39
+4
+42
+------
+13
+10
+45
+23
+34
+36
+------
+11
+TODAY: 2023 September 15, Friday : 06:42:PM
+-------------------------------
+
+===== LAST DRAW IN DATABASE =====
+LAST DRAW ID: 4131
+LAST DRAW DATE: 2023-September-13 - WED
+LAST DRAW NUMBERS: [8, 10, 18, 32, 33, 42, 40]
+
+===== NEXT DRAW =====
+NEXT DRAW DAY:  sat
+NEXT DRAW DATE: 2023-September-16 - SAT
+
+===== REPETITIONS =====
+Total number of repetitions: 2
+Repeated Numbers : [8, 42]
+
+===== FREQUENTED & MISSED NUMBERS =====
+Frequented Numbers in 'Last 20' Draws: [10, 3, 7, 25, 35]
+Missed Numbers  in 'Last 5' Draws: [1, 2, 4, 5, 6, 7, 9, 11, 14, 15, 19, 21, 23, 24, 28, 29, 34, 36, 37, 40, 45, 47, 48, 49]
+Frequented but Missed Numbers : [7]
+
+===== SUBSEQUENCE NUMBERS =====
+ball_num_1: [{'subseq_num': 3, 'freq': 23}, {'subseq_num': 1, 'freq': 22}, {'subseq_num': 4, 'freq': 21}]
+ball_num_2: [{'subseq_num': 9, 'freq': 20}, {'subseq_num': 14, 'freq': 15}, {'subseq_num': 13, 'freq': 14}]
+ball_num_3: [{'subseq_num': 19, 'freq': 13}, {'subseq_num': 22, 'freq': 13}, {'subseq_num': 25, 'freq': 12}]
+ball_num_4: [{'subseq_num': 31, 'freq': 12}, {'subseq_num': 27, 'freq': 11}, {'subseq_num': 30, 'freq': 10}]
+ball_num_5: [{'subseq_num': 38, 'freq': 10}, {'subseq_num': 34, 'freq': 10}, {'subseq_num': 44, 'freq': 9}]
+ball_num_6: [{'subseq_num': 45, 'freq': 27}, {'subseq_num': 48, 'freq': 23}, {'subseq_num': 49, 'freq': 22}]
+ball_num_7: [{'subseq_num': 34, 'freq': 5}, {'subseq_num': 25, 'freq': 4}, {'subseq_num': 39, 'freq': 4}]
+[3, 9, 19, 31, 38, 45, 34]
+Total Numbers in collection: 7
+1 Numbers Found: [3]
+Drawn: [8, 17, 20, 26, 42, 44, 3]
+
+===== FREQUENTED NUMBERS BY DATE =====
+[3, 33, 21, 25, 31, 41, 12, 37, 49, 35]
+Total Numbers in collection: 10
+1 Numbers Found: [3]
+
+===== FREQUENTED NUMBERS BY BALL =====
+[1, 10, 21, 31, 38, 49, 5]
+Total Numbers in collection: 7
+0 Numbers Found: []
+
+===== FREQUENTED NUMBERS BY MONTH =====
+[15, 21, 41, 29, 39, 4, 27, 42, 13, 10]
+Total Numbers in collection: 10
+1 Numbers Found: [42]
+
+===== FREQUENTED NUMBERS BY DAY =====
+[45, 27, 21, 31, 41, 23, 49, 34, 36, 11]
+Total Numbers in collection: 10
+0 Numbers Found: []
+
+===== SUBSEQUENCE and FREQUENTED NUMBERS =====
+[3, 9, 19, 31, 38, 45, 34, 10, 7, 25, 35]
+Total Numbers in collection: 11
+1 Numbers Found: [3]
+
+===== SUBSEQUENCE and MISSING NUMBERS =====
+[9, 19, 45, 34, 3, 31, 38, 1, 2, 4, 5, 6, 7, 11, 14, 15, 21, 23, 24, 28, 29, 36, 37, 40, 47, 48, 49]
+Total Numbers in collection: 27
+1 Numbers Found: [3]
+
+===== SUBSEQUENCE and DATE NUMBERS =====
+[3, 31, 9, 19, 38, 45, 34, 33, 21, 25, 41, 12, 37, 49, 35]
+Total Numbers in collection: 15
+1 Numbers Found: [3]
+
+===== SUBSEQUENCE and BALL NUMBERS =====
+[31, 38, 3, 9, 19, 45, 34, 1, 10, 21, 49, 5]
+Total Numbers in collection: 12
+1 Numbers Found: [3]
+
+===== SUBSEQUENCE and MONTH NUMBERS =====
+[3, 9, 19, 31, 38, 45, 34, 15, 21, 41, 29, 39, 4, 27, 42, 13, 10]
+Total Numbers in collection: 17
+2 Numbers Found: [42, 3]
+
+===== SUBSEQUENCE and DAY NUMBERS =====
+[31, 45, 34, 3, 9, 19, 38, 27, 21, 41, 23, 49, 36, 11]
+Total Numbers in collection: 14
+1 Numbers Found: [3]
+
+===== DATE and FREQUENTED NUMBERS =====
+[3, 25, 35, 33, 21, 31, 41, 12, 37, 49, 10, 7]
+Total Numbers in collection: 12
+1 Numbers Found: [3]
+
+===== DATE and MISSING NUMBERS =====
+[21, 37, 49, 3, 33, 25, 31, 41, 12, 35, 1, 2, 4, 5, 6, 7, 9, 11, 14, 15, 19, 23, 24, 28, 29, 34, 36, 40, 45, 47, 48]
+Total Numbers in collection: 31
+1 Numbers Found: [3]
+
+===== DATE and BALL NUMBERS =====
+[21, 31, 49, 3, 33, 25, 41, 12, 37, 35, 1, 10, 38, 5]
+Total Numbers in collection: 14
+1 Numbers Found: [3]
+
+===== DATE and MONTH NUMBERS =====
+[21, 41, 3, 33, 25, 31, 12, 37, 49, 35, 15, 29, 39, 4, 27, 42, 13, 10]
+Total Numbers in collection: 18
+2 Numbers Found: [42, 3]
+
+===== DATE and DAY NUMBERS =====
+[21, 31, 41, 49, 3, 33, 25, 12, 37, 35, 45, 27, 23, 34, 36, 11]
+Total Numbers in collection: 16
+1 Numbers Found: [3]
+
+===== BALL and FREQUENTED NUMBERS =====
+[10, 1, 21, 31, 38, 49, 5, 3, 7, 25, 35]
+Total Numbers in collection: 11
+1 Numbers Found: [3]
+
+===== BALL and MISSING NUMBERS =====
+[1, 21, 49, 5, 10, 31, 38, 2, 4, 6, 7, 9, 11, 14, 15, 19, 23, 24, 28, 29, 34, 36, 37, 40, 45, 47, 48]
+Total Numbers in collection: 27
+0 Numbers Found: []
+
+===== BALL and MONTH NUMBERS =====
+[10, 21, 1, 31, 38, 49, 5, 15, 41, 29, 39, 4, 27, 42, 13]
+Total Numbers in collection: 15
+1 Numbers Found: [42]
+
+===== BALL and DAY NUMBERS =====
+[21, 31, 49, 1, 10, 38, 5, 45, 27, 41, 23, 34, 36, 11]
+Total Numbers in collection: 14
+0 Numbers Found: []
+
+===== MONTH and FREQUENTED NUMBERS =====
+[10, 15, 21, 41, 29, 39, 4, 27, 42, 13, 3, 7, 25, 35]
+Total Numbers in collection: 14
+2 Numbers Found: [42, 3]
+
+===== MONTH and MISSING NUMBERS =====
+[15, 21, 29, 4, 41, 39, 27, 42, 13, 10, 1, 2, 5, 6, 7, 9, 11, 14, 19, 23, 24, 28, 34, 36, 37, 40, 45, 47, 48, 49]
+Total Numbers in collection: 30
+1 Numbers Found: [42]
+
+===== MONTH and DAY NUMBERS =====
+[21, 41, 27, 15, 29, 39, 4, 42, 13, 10, 45, 31, 23, 49, 34, 36, 11]
+Total Numbers in collection: 17
+1 Numbers Found: [42]
+
+===== DAY and FREQUENTED NUMBERS =====
+[45, 27, 21, 31, 41, 23, 49, 34, 36, 11, 10, 3, 7, 25, 35]
+Total Numbers in collection: 15
+1 Numbers Found: [3]
+
+===== DAY and MISSING NUMBERS =====
+[45, 21, 23, 49, 34, 36, 11, 27, 31, 41, 1, 2, 4, 5, 6, 7, 9, 14, 15, 19, 24, 28, 29, 37, 40, 47, 48]
+Total Numbers in collection: 27
+0 Numbers Found: []
+
+===== Combined Numbers : date + month + day + subseq =====
+{31: 3, 21: 3, 41: 3, 3: 2, 45: 2, 34: 2, 49: 2, 27: 2, 9: 1, 19: 1, 38: 1, 33: 1, 25: 1, 12: 1, 37: 1, 35: 1, 15: 1, 29: 1, 39: 1, 4: 1, 42: 1, 13: 1, 10: 1, 23: 1, 36: 1, 11: 1}
+26
+[31, 21, 41, 3, 45, 34, 49, 27, 9, 19, 38, 33, 25, 12, 37, 35, 15, 29, 39, 4, 42, 13, 10, 23, 36, 11]
+31
+21
+41
+3
+45
+34
+---pick of 6
+49
+27
+9
+19
+38
+33
+---pick of 6
+25
+12
+37
+35
+15
+29
+---pick of 6
+39
+4
+42
+13
+10
+23
+---pick of 6
+36
+11
+
+===== Collection of all numbers =====
+{21: 5, 31: 4, 49: 4, 3: 3, 45: 3, 34: 3, 10: 3, 41: 3, 9: 2, 19: 2, 38: 2, 7: 2, 25: 2, 35: 2, 1: 2, 4: 2, 5: 2, 11: 2, 15: 2, 23: 2, 29: 2, 36: 2, 37: 2, 27: 2, 2: 1, 6: 1, 14: 1, 24: 1, 28: 1, 40: 1, 47: 1, 48: 1, 33: 1, 12: 1, 39: 1, 42: 1, 13: 1}
+37
+[21, 31, 49, 3, 45, 34, 10, 41, 9, 19, 38, 7, 25, 35, 1, 4, 5, 11, 15, 23, 29, 36, 37, 27, 2, 6, 14, 24, 28, 40, 47, 48, 33, 12, 39, 42, 13]
+21
+31
+49
+3
+45
+34
+---pick of 6
+10
+41
+9
+19
+38
+7
+---pick of 6
+25
+35
+1
+4
+5
+11
+---pick of 6
+15
+23
+29
+36
+37
+27
+---pick of 6
+2
+6
+14
+24
+28
+40
+---pick of 6
+47
+48
+33
+12
+39
+42
+---pick of 6
+13
+=============== END OF TASK: Generate Basic Report ===============
+
+TASK OPTIONS:
+1 - DB Status
+2 - File Status
+3 - Import Latest Draw
+4 - Build Basic Stats
+5 - Analyze Latest Draw
+6 - Generate Basic Report
+7 - Generate Tickets
+8 - Build Advanced Stats
+9 - Generate HTML Report
+10 - DB Backup
+11 - DB Restore
+12 - ADDITIONAL TABLES
+q - QUIT
+PLEASE ENTER INTEGER FOR THE TASK:

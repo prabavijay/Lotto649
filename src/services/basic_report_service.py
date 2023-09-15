@@ -15,9 +15,10 @@ class BasicReportService:
         (self.last_draw_date, self.last_draw_numbers) = (
             self.basic_queries.get_draw_date_numbers_by_id(self.last_draw_id))
         date_str = utils.date_to_string(self.last_draw_date)
-        print(f"Following Stats are for: {date_str}")
+        print(f"Following Stats are for: ")
         print("-----------")
         next_draw_timestamp = utils.get_future_draw_date()
+        print(f"NEXT DRAW DATE: {next_draw_timestamp}")
         # self.next_draw_date = next_draw_timestamp[0]
         self.next_draw_month = next_draw_timestamp[1]
         self.next_draw_dateofmonth = next_draw_timestamp[2]
