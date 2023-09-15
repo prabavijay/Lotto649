@@ -107,6 +107,18 @@ def get_date_of_last_saturday():
     last_saturday = today - timedelta(days=offset)
     return last_saturday
 
+def get_date_of_next_wednesday():
+    today = datetime.now()
+    offset = (2 - today.weekday()) % 7
+    next_wednesday = today + timedelta(days=offset)
+    return next_wednesday
+
+def get_date_of_next_saturday():
+    today = datetime.now()
+    offset = (5 - today.weekday()) % 7
+    next_saturday = today + timedelta(days=offset)
+    return next_saturday
+
 def is_date2_latest(date1, date2):
     # from datetime import date, timedelta
 
@@ -153,12 +165,18 @@ def get_future_draw_date():
     #
     # [datetime.datetime(2023, 9, 4, 5, 22, 5, 184840), 'September', '04', 'Monday', 5, 'AM']
     current_timestamp = get_today_date(False)
-
+    day = get_day_of_week(current_timestamp)
+    next_draw_day = day
+    if day in ['thu', 'fri']:
+        next_draw_day = 'sat'
+        current_timestamp = get_date_of_next_saturday()
+    elif day in ['sun', 'mon', 'tue']:
+        next_draw_day = 'wed'
+        current_timestamp = get_date_of_next_wednesday()
+    print("NEXT DRAW DAY: ", next_draw_day)
     month = get_month_of_year(current_timestamp)
     dateofmonth = get_date_of_month(current_timestamp)
-    day = get_day_of_week(current_timestamp)
-
-    next_draw_timestamp = [current_timestamp, month, dateofmonth, day]
+    next_draw_timestamp = [current_timestamp, month, dateofmonth, next_draw_day]
     return next_draw_timestamp
 
 # ========= Dictionary utils =================================

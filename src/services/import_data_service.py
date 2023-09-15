@@ -42,8 +42,10 @@ class ImportDataService:
             self.data_to_insert = self.extract_bulk_draws_from_file()
             self.insert_bulk_draws_into_db()
         elif self.import_type == 'latest_draws':
-            self.data_to_insert = self.extract_latest_draws_from_file()
-            self.insert_latest_draws_into_db()
+            # self.data_to_insert = self.extract_latest_draws_from_file()
+            # self.insert_latest_draws_into_db()
+            self.data_to_insert = self.extract_bulk_draws_from_file()
+            self.insert_bulk_draws_into_db()
 
     def extract_latest_draws_from_file(self):
         # --- Expected format for data in 'latest draw results' file
@@ -225,9 +227,8 @@ class ImportDataService:
         # -- to make it fast query, we're assuming bulk data doesn't have duplicates,
         # so we're searching where id > 14000
         sql_find_duplicates = text("SELECT id from draw_results dr where (select count(*) from draw_results dr2"
-                                   " where dr.id > 14000"
-                                   " and dr.draw_date = dr2.draw_date"
-                                   " and dr.draw_time = dr2.draw_time ) > 1")
+                                   " where dr.id > 4100"
+                                   " and dr.draw_date = dr2.draw_date ) > 1")
 
         with self.db_connect.engine.connect() as conn:
             results = conn.execute(sql_find_duplicates)
@@ -241,7 +242,6 @@ class ImportDataService:
     def delete_duplicates_in_draw_results(self):
         sql_to_delete_duplicates = text("DELETE FROM draw_results dr1 USING draw_results dr2 "
                                         "where dr1.draw_date = dr2.draw_date "
-                                        "AND dr1.draw_time = dr2.draw_time "
                                         "AND dr2.id > dr1.id")
         with self.db_connect.engine.connect() as conn:
             transaction = conn.begin()
