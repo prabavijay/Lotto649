@@ -142,6 +142,7 @@ def is_date2_latest(date1, date2):
 def get_expected_draw_date():
     current_date = get_today_date().date()
     # print("CURRENT DATE: " + current_timestamp.strftime("%A %B %d, %Y"))
+
     expected_draw_date = ''
     date_of_last_saturday = get_date_of_last_saturday()
     date_of_last_wednesday = get_date_of_last_wednesday()
@@ -149,7 +150,7 @@ def get_expected_draw_date():
     if saturday_later_than_wednesday:
         expected_draw_date = date_of_last_saturday
     else:
-        expected_draw_date = date_of_last_wednesday
+        expected_draw_date = date_of_last_saturday # date_of_last_wednesday
 
     return expected_draw_date
 
